@@ -45,14 +45,21 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 10px;
+  justify-items: center;
 }
 
 .preview.pie {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 10px;
-  flex-direction: row;
+  max-width: 280px;
+  margin: auto;
+  border-radius: 50%;
+  padding: 20px;
+  transform: rotate(-5deg);
+  background: #fff;
 }
 
 .swatch {
@@ -62,5 +69,4 @@ button:hover {
   background-size: cover;
   background-position: center;
   border: 2px solid #ccc;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.
