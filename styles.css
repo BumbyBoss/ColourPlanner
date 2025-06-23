@@ -44,16 +44,20 @@ button:hover {
 .preview.grid {
   display: grid;
   grid-template-columns: repeat(3, 80px);
-  grid-gap: 4px;
+  grid-template-rows: repeat(3, 80px);
+  gap: 0;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 
 .swatch {
   width: 80px;
   height: 80px;
-  border-radius: 6px;
   background-size: cover;
   background-position: center;
   border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
 }
