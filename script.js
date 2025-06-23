@@ -1,9 +1,11 @@
 const swatchData = [
+  "BuilderComfyPapelPicado-.jpg",
   "BuilderCozyMontepulciano.jpg",
   "BuilderJerseydeCozyNightVapor.jpg",
+  "BuilderDrapierdeCozyVenusTrap.jpg",
+  "BuilderCozyWaxedCanvas.jpg",
   "BuilderCozyVintage.jpg",
   "BuilderCozyUnicornFluff.jpg",
-  "BuilderCozyWaxedCanvas.jpg",
   "BuilderCozySullivan.jpg",
   "BuilderCozyStripedSilver.jpg",
   "BuilderCozyStripedRoseyMauve.jpg",
@@ -12,18 +14,13 @@ const swatchData = [
   "BuilderCozyStripedNavy.jpg",
   "BuilderCozyStripedLizard.jpg",
   "BuilderCozyStripedInspire.jpg",
-  "BuilderCozyStripedIceQueen.jpg",
-  "BuilderDrapierdeCozyVenusTrap.jpg",
-  "BuilderComfyPapelPicado-.jpg",
-  "BuilderCozyStripedNightFall.jpg"
+  "BuilderCozyStripedIceQueen.jpg"
 ];
 
 const swatchBaseURL = "https://www.bumbywool.com/wp-content/uploads/2025/01/";
 
-const swatchCount = document.getElementById("swatchCount");
 const swatchSelectors = document.getElementById("swatchSelectors");
 const preview = document.getElementById("preview");
-const toggleView = document.getElementById("toggleView");
 const resetButton = document.getElementById("reset");
 
 function createDropdown(index) {
@@ -33,7 +30,7 @@ function createDropdown(index) {
 
   const defaultOption = document.createElement("option");
   defaultOption.textContent = `Select #${index + 1}`;
-  defaultOption.disabled = true;
+  defaultOption.disabled = false;
   defaultOption.selected = true;
   select.appendChild(defaultOption);
 
@@ -50,9 +47,9 @@ function createDropdown(index) {
   return select;
 }
 
-function updateSelectors(count) {
+function updateSelectors() {
   swatchSelectors.innerHTML = "";
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < 9; i++) {
     swatchSelectors.appendChild(createDropdown(i));
   }
 }
@@ -70,27 +67,9 @@ function updatePreview() {
   });
 }
 
-function populateSwatchCount() {
-  for (let i = 2; i <= 10; i++) {
-    const option = document.createElement("option");
-    option.value = i;
-    option.textContent = i;
-    swatchCount.appendChild(option);
-  }
-}
-
-populateSwatchCount();
-swatchCount.addEventListener("change", (e) => {
-  updateSelectors(e.target.value);
-});
-
-toggleView.addEventListener("click", () => {
-  preview.classList.toggle("grid");
-  preview.classList.toggle("pie");
-});
-
 resetButton.addEventListener("click", () => {
-  swatchSelectors.innerHTML = "";
+  updateSelectors();
   preview.innerHTML = "";
-  swatchCount.value = "";
 });
+
+updateSelectors();
