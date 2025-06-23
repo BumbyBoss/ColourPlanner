@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 2rem;
-  background: #f9f8f7;
+  background: #ffffff;
   color: #333;
 }
 
@@ -12,16 +12,16 @@ body {
   text-align: center;
 }
 
+h1 {
+  margin-bottom: 1rem;
+}
+
 .controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 999px;
   border: none;
   background-color: #a89d91;
@@ -43,30 +43,17 @@ button:hover {
 
 .preview.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 10px;
-  justify-items: center;
-}
-
-.preview.pie {
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 80px);
+  grid-gap: 4px;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
-  max-width: 280px;
-  margin: auto;
-  border-radius: 50%;
-  padding: 20px;
-  transform: rotate(-5deg);
-  background: #fff;
+  margin: 0 auto;
 }
 
 .swatch {
   width: 80px;
   height: 80px;
-  border-radius: 12px;
+  border-radius: 6px;
   background-size: cover;
   background-position: center;
-  border: 2px solid #ccc;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.
+  border: none;
+}
