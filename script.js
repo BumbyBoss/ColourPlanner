@@ -80,7 +80,6 @@ const swatchData = [
   "BuilderCozyStripedNavy.jpg",
   "BuilderCozyStripedNeptuneRising.jpg",
   "BuilderCozyStripedNightFall.jpg",
-  "BuilderCozyStripedPinkTiger-2.jpg",
   "BuilderCozyStripedRoseyMauve.jpg",
   "BuilderCozyStripedSilver.jpg",
   "BuilderCozyStripedTwilight.jpg",
