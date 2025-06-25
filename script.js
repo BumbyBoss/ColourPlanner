@@ -53,7 +53,7 @@ const swatchData = [
   "BuilderComfyCrushedBerriesMelange.jpg",
   "BuilderComfyMarmalade.jpg",
   "BuilderComfyPapillon.jpg",
-  "BuilderComfySummer-Spritz.jpg",
+  "BuilderComfySummerSpritz.jpg",
   "BuilderComfyUnderTheNeonLights.jpg",
   "BuilderComfyViburnum.jpg",
   "BuilderComfyZinnia.jpg",
